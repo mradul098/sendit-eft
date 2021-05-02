@@ -36,7 +36,7 @@ router.post('/',(req,res)=>{
         });
         //saving the file in db
         const response = await file.save(); //remember the await we used inplace of the promises the deal is just await for the respone if you get the respones then great otherwise catch the error
-        return res.json({file:`${process.env.APP_BASE_URL}/files/${response.uuid}`});
+        return res.json({file:`${process.env.APP_BASE_URL}files/${response.uuid}`});
         //the link that will be send will look something like this http://localhost:3000/files/2345dsfsg-234gjkasdf
     });
 });

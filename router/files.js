@@ -66,8 +66,8 @@ router.post('/send', (req, res) => {
       port: 587,
       secure: false, // true for 465, false for other ports
       auth: {
-          user: 'secondpart00@gmail.com', // generated ethereal user
-          pass: '9424974191'  // generated ethereal password
+          user: process.env.MAIL_ID, // generated ethereal user
+          pass: process.env.PASS  // generated ethereal password
       },
       tls:{
         rejectUnauthorized:false
